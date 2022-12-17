@@ -4,8 +4,17 @@
 
 class simpleTimer{
 	public:
-		simpleTimer();
+		simpleTimer(unsigned long interval);
+		void initialize();
+		bool triggered();
+		void reset();
+		void setInterval(unsigned long interval);
+		unsigned long getInterval();
+		
 	private:
+		unsigned long _interval;
+		unsigned long _millisNow;
+		unsigned long _millisThen;
 };
 
 #endif
