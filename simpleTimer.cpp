@@ -20,6 +20,14 @@ bool simpleTimer::triggered(){
 	return triggered;
 }
 
+bool simpleTimer::triggeredNoReset(){
+	bool triggered = false;
+	_millisNow = millis();
+	if(_millisNow - _millisThen >= _interval){
+		triggered = true;
+	}
+	return triggered;
+}
 
 void simpleTimer::reset(){
 	_millisNow = millis();

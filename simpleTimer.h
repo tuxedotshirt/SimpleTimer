@@ -7,6 +7,7 @@ class simpleTimer{
 		simpleTimer(unsigned long interval);
 		void initialize();
 		bool triggered();
+		bool triggeredNoReset();
 		void reset();
 		void setInterval(unsigned long interval);
 		unsigned long getInterval();
